@@ -78,3 +78,16 @@ body {
 .nav-links a:hover {
     background-color: #575757;
 }
+
+.info-box {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.info-box p {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
