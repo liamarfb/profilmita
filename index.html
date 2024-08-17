@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1">
     <title>Menu Website</title>
     <link rel="stylesheet" href="style.css"> <!-- Menyertakan file CSS eksternal -->
 </head>
@@ -40,7 +40,55 @@
                     <p><strong>No Urut :</strong> 20</p>
                 </div>
             </section>
+
+            <!-- Alasan Memilih Undiksha -->
+            <section id="alasan-undiksha" style="display:none;">
+                <h1>Alasan Memilih Undiksha</h1>
+                <p>Saya memilih Universitas Pendidikan Ganesha, khususnya Program Studi Pendidikan Kesejahteraan Keluarga, karena saya memiliki minat yang besar dalam dunia keterampilan, terutama menjahit. Sejak kecil, saya selalu tertarik dengan seni membuat pakaian dan aksesoris, dan menjahit telah menjadi salah satu cara bagi saya untuk mengekspresikan kreativitas.</p>
+                <p>Undiksha menawarkan lingkungan akademik yang kuat dengan fokus pada pengembangan keterampilan praktis yang sangat relevan dengan minat saya. Program studi ini tidak hanya memberikan dasar yang kokoh dalam pendidikan kesejahteraan keluarga tetapi juga memberikan kesempatan untuk mengembangkan keterampilan menjahit saya ke tingkat yang lebih profesional. Saya yakin bahwa dengan bimbingan dari para dosen yang kompeten serta fasilitas yang memadai di Undiksha, saya bisa mengembangkan kemampuan saya lebih jauh dan mempersiapkan diri untuk berkontribusi di bidang ini di masa depan.</p>
+                <p>Selain itu, Undiksha memiliki reputasi yang baik dalam membentuk tenaga pendidik yang berkompeten dan kreatif, dan saya ingin menjadi bagian dari komunitas yang berdedikasi untuk memajukan pendidikan dan keterampilan di Indonesia. Saya yakin bahwa Undiksha adalah tempat yang tepat bagi saya untuk mencapai impian tersebut.</p>
+            </section>
+
+            <!-- Perjalanan -->
+            <section id="perjalanan" style="display:none;">
+                <h1>Perjalanan</h1>
+                <p>Pertama kali tertarik untuk melanjutkan ke jenjang perguruan tinggi saat duduk di bangku kelas 11 SMK. Saya mencoba mendaftar melalui jalur SNBP, yang dikenal sebagai "jalur langit," namun sayangnya gagal. Tidak menyerah, saya kemudian mengikuti jalur UTBK, yang sering disebut sebagai "jalur usaha." Selama 4 bulan, dari Januari hingga April, saya mempersiapkan diri dengan belajar materi UTBK secara intensif. Akhirnya, usaha saya membuahkan hasil, dan saya diterima di Universitas Pendidikan Ganesha melalui jalur ini.</p>
+            </section>
+
+            <!-- Prestasi -->
+            <section id="prestasi" style="display:none;">
+                <h1>Prestasi</h1>
+                <p>Isi konten tentang prestasi...</p>
+            </section>
+
+            <!-- Harapan -->
+            <section id="harapan" style="display:none;">
+                <h1>Harapan</h1>
+                <p>Isi konten tentang harapan...</p>
+            </section>
+
+            <!-- Kontak -->
+            <section id="kontak" style="display:none;">
+                <h1>Kontak</h1>
+                <p>Isi konten tentang cara menghubungi...</p>
+            </section>
         </div>
     </div>
+
+    <script>
+        // JavaScript untuk menampilkan bagian yang dipilih dan menyembunyikan bagian lainnya
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none'; // Sembunyikan semua section
+                });
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.style.display = 'block'; // Tampilkan section yang dipilih
+            });
+        });
+
+        // Secara default, tampilkan Beranda
+        document.querySelector('#beranda').style.display = 'block';
+    </script>
 </body>
 </html>
